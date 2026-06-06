@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+function initPortfolio() {
 
   /* ==========================================
      1. STICKY HEADER & MOBILE NAV
@@ -9,16 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
 
   // Sticky navbar
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('sticky');
-    } else {
-      header.classList.remove('sticky');
-    }
-  });
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('sticky');
+      } else {
+        header.classList.remove('sticky');
+      }
+    });
+  }
 
   // Mobile menu toggle
-  if (navToggle) {
+  if (navToggle && navMenu) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navMenu.classList.toggle('active');
@@ -28,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close mobile menu on nav link click
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (navToggle && navToggle.classList.contains('active')) {
+      if (navToggle && navToggle.classList.contains('active') && navMenu) {
         navToggle.classList.remove('active');
         navMenu.classList.remove('active');
       }
@@ -95,17 +97,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         skillBars.forEach(bar => {
           const percent = bar.getAttribute('data-percent');
-          bar.style.width = percent + '%';
+          if (percent) {
+            bar.style.width = percent + '%';
+          }
         });
         skillsObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
-  if (skillsSection) {
+  if (skillsSection && skillBars.length > 0) {
     skillsObserver.observe(skillsSection);
   }
-
 
   /* ==========================================
      5. PREMIUM TESTIMONIAL SLIDER
@@ -116,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.querySelector('.slider-btn-next');
   const dotsContainer = document.querySelector('.slider-dots');
 
-  if (track && slides.length > 0) {
+  if (track && slides.length > 0 && dotsContainer) {
     let currentIndex = 0;
     let autoSlideInterval;
 
@@ -144,7 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Update Dots Active Class
       dots.forEach(dot => dot.classList.remove('active'));
-      dots[currentIndex].classList.add('active');
+      if (dots[currentIndex]) {
+        dots[currentIndex].classList.add('active');
+      }
     };
 
     // Event Listeners
@@ -194,11 +199,19 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('formName').value.trim();
-      const email = document.getElementById('formEmail').value.trim();
-      const service = document.getElementById('formService').value;
-      const budget = document.getElementById('formBudget').value;
-      const message = document.getElementById('formMessageText').value.trim();
+      const nameEl = document.getElementById('formName');
+      const emailEl = document.getElementById('formEmail');
+      const serviceEl = document.getElementById('formService');
+      const budgetEl = document.getElementById('formBudget');
+      const messageEl = document.getElementById('formMessageText');
+
+      if (!nameEl || !emailEl || !messageEl) return;
+
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const service = serviceEl ? serviceEl.value : '';
+      const budget = budgetEl ? budgetEl.value : '';
+      const message = messageEl.value.trim();
 
       // Simple Validation
       if (!name || !email || !message) {
@@ -245,4 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-});
+}
+
+// Bulletproof execution wrapper: run immediately if DOM is ready, otherwise wait for DOMContentLoaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPortfolio);
+} else {
+  initPortfolio();
+}
