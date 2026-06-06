@@ -79,12 +79,27 @@ function initPortfolio() {
     });
   }, {
     root: null,
-    threshold: 0.15
+    threshold: 0.05
   });
 
   revealElements.forEach(element => {
     revealObserver.observe(element);
   });
+
+  // Fallback: standard scroll-based activation if IntersectionObserver doesn't trigger
+  const triggerRevealFallback = () => {
+    revealElements.forEach(element => {
+      if (!element.classList.contains('active')) {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+          element.classList.add('active');
+        }
+      }
+    });
+  };
+  window.addEventListener('scroll', triggerRevealFallback);
+  window.addEventListener('resize', triggerRevealFallback);
+  setTimeout(triggerRevealFallback, 800); // Trigger once shortly after load
 
   /* ==========================================
      3. ANIMATED SKILLS PROGRESS BARS
@@ -104,11 +119,30 @@ function initPortfolio() {
         skillsObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.05 });
 
   if (skillsSection && skillBars.length > 0) {
     skillsObserver.observe(skillsSection);
   }
+
+  // Fallback for skills progress animation
+  const triggerSkillsFallback = () => {
+    if (skillsSection && skillBars.length > 0) {
+      const rect = skillsSection.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+        skillBars.forEach(bar => {
+          if (!bar.style.width || bar.style.width === '0px' || bar.style.width === '0%') {
+            const percent = bar.getAttribute('data-percent');
+            if (percent) {
+              bar.style.width = percent + '%';
+            }
+          }
+        });
+      }
+    }
+  };
+  window.addEventListener('scroll', triggerSkillsFallback);
+  setTimeout(triggerSkillsFallback, 1000);
 
   /* ==========================================
      5. PREMIUM TESTIMONIAL SLIDER
@@ -258,6 +292,8 @@ function initPortfolio() {
     }
   };
 
+  // Flag indicating successful execution of main portfolio script
+  window.portfolioInitialized = true;
 }
 
 // Bulletproof execution wrapper: run immediately if DOM is ready, otherwise wait for DOMContentLoaded

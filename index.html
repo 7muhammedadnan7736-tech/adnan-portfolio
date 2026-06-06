@@ -11,6 +11,16 @@
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="./style.css">
+  
+  <!-- Noscript Fallback: reveal all elements if JS is disabled -->
+  <noscript>
+    <style>
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -1085,5 +1095,41 @@
 
   <!-- JS Logic -->
   <script type="module" src="./main.js"></script>
+
+  <!-- Local Fallback: If main JS fails to load (CORS block on file:// protocol), reveal page elements -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        if (!window.portfolioInitialized) {
+          console.warn('Local fallback activated: ES module was blocked (likely CORS / file:// protocol).');
+          
+          // Reveal all sections
+          var reveals = document.querySelectorAll('.reveal');
+          for (var i = 0; i < reveals.length; i++) {
+            reveals[i].classList.add('active');
+          }
+          
+          // Make skill bars animate
+          var skillBars = document.querySelectorAll('.skill-bar-fill');
+          for (var j = 0; j < skillBars.length; j++) {
+            var percent = skillBars[j].getAttribute('data-percent');
+            if (percent) {
+              skillBars[j].style.width = percent + '%';
+            }
+          }
+          
+          // Basic Mobile Menu toggle
+          var toggle = document.querySelector('.mobile-nav-toggle');
+          var menu = document.querySelector('.nav-menu');
+          if (toggle && menu) {
+            toggle.addEventListener('click', function() {
+              toggle.classList.toggle('active');
+              menu.classList.toggle('active');
+            });
+          }
+        }
+      }, 500);
+    });
+  </script>
 </body>
 </html>
