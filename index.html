@@ -24,6 +24,9 @@
 </head>
 <body>
 
+  <!-- Hidden image to force Vite to bundle the CV asset -->
+  <img id="cv-asset-img" src="./cv.jpg" style="display: none;" alt="CV Asset">
+
   <!-- Background Glowing Blobs -->
   <div class="glow-effect glow-gold"></div>
   <div class="glow-effect glow-blue"></div>
@@ -1126,6 +1129,13 @@
               toggle.classList.toggle('active');
               menu.classList.toggle('active');
             });
+          }
+
+          // Sync CV download link with Vite compiled asset
+          var cvImg = document.getElementById('cv-asset-img');
+          var cvDownload = document.querySelector('a[download]');
+          if (cvImg && cvDownload) {
+            cvDownload.href = cvImg.src;
           }
         }
       }, 500);

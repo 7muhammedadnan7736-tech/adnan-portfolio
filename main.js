@@ -292,6 +292,13 @@ function initPortfolio() {
     }
   };
 
+  // Sync CV download link with Vite compiled asset
+  const cvImg = document.getElementById('cv-asset-img');
+  const cvDownload = document.querySelector('a[download]');
+  if (cvImg && cvDownload) {
+    cvDownload.href = cvImg.src;
+  }
+
   // Flag indicating successful execution of main portfolio script
   window.portfolioInitialized = true;
 }
