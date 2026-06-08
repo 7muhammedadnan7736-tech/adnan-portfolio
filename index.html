@@ -24,9 +24,6 @@
 </head>
 <body>
 
-  <!-- Hidden image to force Vite to bundle the CV asset -->
-  <img id="cv-asset-img" src="./cv.jpg" style="display: none;" alt="CV Asset">
-
   <!-- Background Glowing Blobs -->
   <div class="glow-effect glow-gold"></div>
   <div class="glow-effect glow-blue"></div>
@@ -889,9 +886,12 @@
             </svg>
             <h4 class="resume-card-title" style="border:none; padding: 0; margin-bottom: 12px;">Curriculum Vitae</h4>
             <p style="font-size: 13px; color: var(--color-secondary); margin-bottom: 24px;">
-              Download my complete professional CV mapping out my academic history, tools competence, and core digital marketing course certifications.
+              Download or preview my complete professional CV mapping out my academic history, tools competence, and core digital marketing course certifications.
             </p>
-            <a href="./cv.jpg" download="Mohammed_Adnan_CV.jpg" class="btn btn-solid" style="width: 100%;">Download Resume</a>
+            <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+              <button id="btnPreviewCV" class="btn btn-secondary" style="width: 100%;">Preview CV</button>
+              <a href="./cv.jpg" download="Mohammed_Adnan_CV.jpg" class="btn btn-solid" style="width: 100%;">Download Resume</a>
+            </div>
           </div>
           
           <!-- Cert Timeline -->
@@ -1097,6 +1097,21 @@
   </a>
 
   <!-- JS Logic -->
+  <!-- CV Preview Modal -->
+  <div id="cvModal" class="cv-modal">
+    <span class="cv-modal-close">&times;</span>
+    <div class="cv-modal-content-wrapper">
+      <img class="cv-modal-content" id="imgModalCV" src="./cv.jpg" alt="Mohammed Adnan CV Resume">
+      <a href="./cv.jpg" download="Mohammed_Adnan_CV.jpg" class="btn btn-solid cv-modal-download">
+        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+        Download CV
+      </a>
+    </div>
+  </div>
+
+  <!-- JS Logic -->
   <script type="module" src="./main.js"></script>
 
   <!-- Local Fallback: If main JS fails to load (CORS block on file:// protocol), reveal page elements -->
@@ -1131,11 +1146,28 @@
             });
           }
 
-          // Sync CV download link with Vite compiled asset
-          var cvImg = document.getElementById('cv-asset-img');
-          var cvDownload = document.querySelector('a[download]');
-          if (cvImg && cvDownload) {
-            cvDownload.href = cvImg.src;
+          // Basic CV Preview Modal
+          var cvModal = document.getElementById('cvModal');
+          var btnPreview = document.getElementById('btnPreviewCV');
+          var btnClose = document.querySelector('.cv-modal-close');
+          if (cvModal && btnPreview) {
+            btnPreview.addEventListener('click', function(e) {
+              e.preventDefault();
+              cvModal.style.display = 'block';
+              document.body.style.overflow = 'hidden';
+            });
+          }
+          if (btnClose && cvModal) {
+            btnClose.addEventListener('click', function() {
+              cvModal.style.display = 'none';
+              document.body.style.overflow = 'auto';
+            });
+            cvModal.addEventListener('click', function(e) {
+              if (e.target === cvModal) {
+                cvModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+              }
+            });
           }
         }
       }, 500);

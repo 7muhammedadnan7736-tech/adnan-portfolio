@@ -292,11 +292,34 @@ function initPortfolio() {
     }
   };
 
-  // Sync CV download link with Vite compiled asset
-  const cvImg = document.getElementById('cv-asset-img');
-  const cvDownload = document.querySelector('a[download]');
-  if (cvImg && cvDownload) {
-    cvDownload.href = cvImg.src;
+  /* ==========================================
+     7. CV PREVIEW MODAL
+     ========================================== */
+  const cvModal = document.getElementById('cvModal');
+  const btnPreview = document.getElementById('btnPreviewCV');
+  const btnClose = document.querySelector('.cv-modal-close');
+
+  if (cvModal && btnPreview) {
+    btnPreview.addEventListener('click', (e) => {
+      e.preventDefault();
+      cvModal.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // Disable background scrolling
+    });
+  }
+
+  if (btnClose && cvModal) {
+    btnClose.addEventListener('click', () => {
+      cvModal.style.display = 'none';
+      document.body.style.overflow = 'auto'; // Enable background scrolling
+    });
+
+    // Close modal when clicking outside the image
+    cvModal.addEventListener('click', (e) => {
+      if (e.target === cvModal) {
+        cvModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
   }
 
   // Flag indicating successful execution of main portfolio script
