@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mohammed Adnan | Graduate Digital Associate</title>
-  <meta name="description" content="Portfolio of Mohammed Adnan, Growth & Performance Associate with hands-on experience in SEO, social media management, and search campaigns.">
+  <title>Mohammed Adnan P | Digital Marketing Enthusiast Portfolio</title>
+  <meta name="description" content="Professional portfolio of Mohammed Adnan P, a passionate Digital Marketing Enthusiast. Explore SEO strategies, social media campaigns, certifications, and project metrics.">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%23D4AF37%22>MA</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 fill=%22%237C3AED%22>MA</text></svg>">
   
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="./style.css">
@@ -33,22 +33,20 @@
      ========================================== -->
   <header class="header">
     <div class="nav-container">
-      <a href="#" class="logo">MOHAMMED<span>ADNAN.</span></a>
+      <a href="#" class="logo">M. ADNAN<span>.P</span></a>
       
-      <nav class="nav-menu">
+      <nav class="nav-menu" id="navMenu">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a href="#certifications" class="nav-link">Certifications</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#tools" class="nav-link">Tools</a>
         <a href="#resume" class="nav-link">Resume</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div style="display: flex; align-items: center; gap: 16px;">
-        <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Get in Touch</a>
-        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+        <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 12px; min-height: 38px; width: auto;">Hire Me</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -58,1051 +56,78 @@
   </header>
 
   <!-- ==========================================
-     HERO SECTION
+     HERO SECTION (Dynamic)
      ========================================== -->
-  <section id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-content reveal active">
-        <span class="hero-pretitle">Graduate Digital Associate</span>
-        <h1 class="hero-name">Mohammed Adnan</h1>
-        <h2 class="hero-title" style="color: var(--accent-gold);">Growth & Performance Associate</h2>
-        <p class="hero-pretitle" style="color: var(--accent-blue); text-transform: none; font-size: 18px; margin-bottom: 20px; letter-spacing: 0.5px;">
-          "Passionate About Digital Growth & Online Marketing"
-        </p>
-        <p class="hero-description">
-          Motivated and analytical Business Administration graduate (Specialization in Marketing) with hands-on internship experience in SEO, social media management, and search campaigns. Eager to leverage a strong academic foundation and Meta/Google certifications to drive growth in an associate role.
-        </p>
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-solid">View Portfolio</a>
-          <a href="#contact" class="btn btn-secondary">Contact Me</a>
-        </div>
-      </div>
-      
-      <div class="hero-image-container reveal active" style="transition-delay: 0.2s;">
-        <div class="hero-image-wrapper">
-          <img src="./profile.png" alt="Mohammed Adnan - Digital Marketing Fresher" class="hero-image">
-        </div>
-        <div class="hero-shape hero-shape-1"></div>
-        <div class="hero-shape hero-shape-2"></div>
-      </div>
-    </div>
-  </section>
+  <section id="home" class="hero"></section>
 
   <!-- ==========================================
-     ABOUT ME SECTION
+     ACHIEVEMENT STATS SECTION (Dynamic)
      ========================================== -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Biography</span>
-        <h2 class="section-title">About Me</h2>
-      </div>
-      
-      <div class="about-content-single reveal">
-        <h3>My Digital Journey & Career Objective</h3>
-        <p class="about-text">
-          I am a highly motivated Business Administration graduate from Calicut University, specializing in Marketing, with a strong academic foundation (CGPA 4.96) and a deep passion for digital growth. My journey combines analytical business strategy with practical marketing methodologies to construct data-driven online campaigns.
-        </p>
-        <p class="about-text">
-          Through hands-on internships and freelance projects, I have developed key competencies in Search Engine Optimization (SEO), Paid Search Campaigns, Social Media Marketing, Content Strategy, and Analytics. I am eager to leverage this knowledge, along with my Google and Meta certifications, to drive traffic and brand growth in a Graduate Digital Associate role.
-        </p>
-        <p class="about-text" style="border-left: 2px solid var(--accent-gold); padding-left: 16px; font-style: italic;">
-          "Marketing is not just about showing ads; it's about building relationships, understanding user search intent, and crafting data-driven solutions that turn audiences into brand advocates."
-        </p>
-        
-        <div class="about-highlights" style="margin-top: 24px;">
-          <div class="highlight-item">
-            <svg class="highlight-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-            <span class="highlight-text">Dedicated Upskilling</span>
-          </div>
-          <div class="highlight-item">
-            <svg class="highlight-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-            </svg>
-            <span class="highlight-text">Creative Campaign Ideation</span>
-          </div>
-          <div class="highlight-item">
-            <svg class="highlight-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-            <span class="highlight-text">Analytical Core</span>
-          </div>
-          <div class="highlight-item">
-            <svg class="highlight-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
-            <span class="highlight-text">Agile Growth Mindset</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="stats" class="stats-bar"></section>
 
   <!-- ==========================================
-     SKILLS SECTION
+     ABOUT ME SECTION (Dynamic)
      ========================================== -->
-  <section id="skills" class="skills" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">What I Know</span>
-        <h2 class="section-title">Core Marketing Skills</h2>
-      </div>
-      
-      <div class="skills-grid">
-        <!-- Skill 1: SEO -->
-        <div class="reveal">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                </svg>
-                <span class="skill-name">SEO (On-Page, Technical, Local)</span>
-              </div>
-              <span class="skill-percentage">88%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="88"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 2: Meta Ads -->
-        <div class="reveal" style="transition-delay: 0.05s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-                <span class="skill-name">Meta Ads (Facebook & Instagram)</span>
-              </div>
-              <span class="skill-percentage">85%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="85"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 3: SMM -->
-        <div class="reveal" style="transition-delay: 0.1s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-                </svg>
-                <span class="skill-name">Social Media Marketing</span>
-              </div>
-              <span class="skill-percentage">90%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="90"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 4: Content Strategy -->
-        <div class="reveal" style="transition-delay: 0.15s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-                </svg>
-                <span class="skill-name">Content Strategy & Copywriting</span>
-              </div>
-              <span class="skill-percentage">80%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="80"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 5: Analytics -->
-        <div class="reveal" style="transition-delay: 0.2s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                </svg>
-                <span class="skill-name">Analytics, GA4 & Reporting</span>
-              </div>
-              <span class="skill-percentage">82%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="82"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 6: Lead Generation -->
-        <div class="reveal" style="transition-delay: 0.25s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
-                </svg>
-                <span class="skill-name">Lead Generation & Funnels</span>
-              </div>
-              <span class="skill-percentage">84%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="84"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 7: Photoshop -->
-        <div class="reveal" style="transition-delay: 0.3s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-                <span class="skill-name">Adobe Photoshop (Advanced)</span>
-              </div>
-              <span class="skill-percentage">85%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="85"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 8: Canva -->
-        <div class="reveal" style="transition-delay: 0.35s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-                <span class="skill-name">Canva (Posters, Template Customization)</span>
-              </div>
-              <span class="skill-percentage">92%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="92"></div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Skill 9: Illustrator -->
-        <div class="reveal" style="transition-delay: 0.4s;">
-          <div class="skill-card">
-            <div class="skill-header">
-              <div class="skill-title-group">
-                <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                </svg>
-                <span class="skill-name">Adobe Illustrator & Logo Design</span>
-              </div>
-              <span class="skill-percentage">78%</span>
-            </div>
-            <div class="skill-bar-bg">
-              <div class="skill-bar-fill" data-percent="78"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="about" class="about"></section>
 
   <!-- ==========================================
-     CERTIFICATIONS SECTION
+     SKILLS SECTION (Dynamic)
      ========================================== -->
-  <section id="certifications" class="certifications">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Credentials</span>
-        <h2 class="section-title">Professional Certifications</h2>
-      </div>
-      
-      <div class="services-grid" style="grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));">
-        <!-- Cert 1 -->
-        <div class="reveal">
-          <div class="glass-card" style="padding: 30px; text-align: center;">
-            <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-            </svg>
-            <h3 style="font-size: 16px; margin-bottom: 8px;">Google Digital Marketing & E-commerce</h3>
-            <p style="color: var(--color-secondary); font-size: 13px; margin-bottom: 4px;">Google Professional Certificate</p>
-            <span style="font-size: 11px; color: var(--accent-blue); font-weight: 600;">Coursera Verified</span>
-          </div>
-        </div>
-        
-        <!-- Cert 2 -->
-        <div class="reveal" style="transition-delay: 0.05s;">
-          <div class="glass-card" style="padding: 30px; text-align: center;">
-            <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-            </svg>
-            <h3 style="font-size: 16px; margin-bottom: 8px;">Google Analytics Certification</h3>
-            <p style="color: var(--color-secondary); font-size: 13px; margin-bottom: 4px;">GA4 Individual Qualification</p>
-            <span style="font-size: 11px; color: var(--accent-blue); font-weight: 600;">Google Skillshop</span>
-          </div>
-        </div>
-        
-        <!-- Cert 3 -->
-        <div class="reveal" style="transition-delay: 0.1s;">
-          <div class="glass-card" style="padding: 30px; text-align: center;">
-            <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-            </svg>
-            <h3 style="font-size: 16px; margin-bottom: 8px;">HubSpot Inbound Marketing</h3>
-            <p style="color: var(--color-secondary); font-size: 13px; margin-bottom: 4px;">Content & Funnel Strategy</p>
-            <span style="font-size: 11px; color: var(--accent-blue); font-weight: 600;">HubSpot Academy</span>
-          </div>
-        </div>
-        
-        <!-- Cert 4 -->
-        <div class="reveal" style="transition-delay: 0.15s;">
-          <div class="glass-card" style="padding: 30px; text-align: center;">
-            <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-            </svg>
-            <h3 style="font-size: 16px; margin-bottom: 8px;">Meta Blueprint Certification</h3>
-            <p style="color: var(--color-secondary); font-size: 13px; margin-bottom: 4px;">Media Buying Fundamentals</p>
-            <span style="font-size: 11px; color: var(--accent-blue); font-weight: 600;">Meta Certified</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="skills" class="skills" style="background-color: var(--bg-secondary);"></section>
+
+
 
   <!-- ==========================================
-     PROJECTS SECTION
+     PROJECTS & CASE STUDIES SECTION (Dynamic)
      ========================================== -->
-  <section id="projects" class="portfolio" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Practice Work</span>
-        <h2 class="section-title">Academic & Practice Projects</h2>
-      </div>
-      
-      <div class="portfolio-grid">
-        <!-- Project 1: SEO Capstone Project -->
-        <div class="reveal">
-          <div class="glass-card portfolio-card">
-            <div class="portfolio-img-wrapper">
-              <span class="portfolio-tag">SEO Capstone</span>
-              <svg class="portfolio-img" viewBox="0 0 400 220" style="background: linear-gradient(135deg, #1e3a8a, #0A192F);">
-                <defs>
-                  <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.8"/>
-                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0.2"/>
-                  </linearGradient>
-                </defs>
-                <circle cx="200" cy="110" r="50" fill="url(#pg1)"/>
-                <path d="M 50 160 L 120 120 L 190 140 L 260 80 L 330 110 L 370 40" fill="none" stroke="#D4AF37" stroke-width="4"/>
-                <circle cx="370" cy="40" r="6" fill="#FFFFFF"/>
-                <text x="30" y="50" fill="#E2E8F0" font-family="sans-serif" font-weight="bold" font-size="14">SEO Non-Profit optimization</text>
-              </svg>
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Capstone: SEO Non-Profit Website Optimization</h3>
-              <p class="portfolio-desc" style="margin-bottom: 16px;">
-                Led a team of 4 students to conduct keyword mapping and content audits for a local non-profit. Implemented basic on-page edits, resulting in search traffic growth.
-              </p>
-              <div style="font-size: 12px; margin-bottom: 16px; color: var(--color-secondary);">
-                <strong>Tools:</strong> Screaming Frog, GSC, Yoast SEO
-              </div>
-              <div class="portfolio-stats-grid" style="border-top: 1px dashed rgba(255,255,255,0.06); padding-top: 12px;">
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val positive">+120%</div>
-                  <div class="portfolio-stat-lbl">Organic Traffic</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">+18 Avg</div>
-                  <div class="portfolio-stat-lbl">Keyword Positions</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">92</div>
-                  <div class="portfolio-stat-lbl">Audit Score</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2: Social Media Campaign Simulation -->
-        <div class="reveal" style="transition-delay: 0.05s;">
-          <div class="glass-card portfolio-card">
-            <div class="portfolio-img-wrapper">
-              <span class="portfolio-tag">SMM Campaign</span>
-              <svg class="portfolio-img" viewBox="0 0 400 220" style="background: linear-gradient(135deg, #0f172a, #1E293B);">
-                <defs>
-                  <linearGradient id="pg2" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
-                    <stop offset="100%" stop-color="#6366F1" stop-opacity="0.1"/>
-                  </linearGradient>
-                </defs>
-                <rect x="80" y="60" width="240" height="110" rx="6" fill="url(#pg2)" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-                <circle cx="130" cy="115" r="25" fill="#D4AF37" opacity="0.8"/>
-                <circle cx="200" cy="115" r="25" fill="#38BDF8" opacity="0.6"/>
-                <circle cx="270" cy="115" r="25" fill="#6366F1" opacity="0.6"/>
-                <text x="30" y="50" fill="#E2E8F0" font-family="sans-serif" font-weight="bold" font-size="14">Launch Campaign Simulation</text>
-              </svg>
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Social Media Launch Campaign Simulation</h3>
-              <p class="portfolio-desc" style="margin-bottom: 16px;">
-                Created a mock go-to-market strategy for a sustainable energy product. Produced copy briefs, structural wireframes, and simulated budget allocations.
-              </p>
-              <div style="font-size: 12px; margin-bottom: 16px; color: var(--color-secondary);">
-                <strong>Tools:</strong> Canva, Meta Ads Manager, Sheets
-              </div>
-              <div class="portfolio-stats-grid" style="border-top: 1px dashed rgba(255,255,255,0.06); padding-top: 12px;">
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">3.8x</div>
-                  <div class="portfolio-stat-lbl">Mock ROAS</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">4.2%</div>
-                  <div class="portfolio-stat-lbl">Conversion Rate</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">500</div>
-                  <div class="portfolio-stat-lbl">Target Leads</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 3: Content Marketing Project -->
-        <div class="reveal" style="transition-delay: 0.1s;">
-          <div class="glass-card portfolio-card">
-            <div class="portfolio-img-wrapper">
-              <span class="portfolio-tag">Content Marketing</span>
-              <svg class="portfolio-img" viewBox="0 0 400 220" style="background: linear-gradient(135deg, #111827, #312E81);">
-                <defs>
-                  <linearGradient id="pg3" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#10B981" stop-opacity="0.7"/>
-                    <stop offset="100%" stop-color="#0F172A" stop-opacity="0.2"/>
-                  </linearGradient>
-                </defs>
-                <rect x="100" y="50" width="200" height="120" rx="4" fill="url(#pg3)"/>
-                <line x1="120" y1="80" x2="280" y2="80" stroke="#D4AF37" stroke-width="3"/>
-                <line x1="120" y1="105" x2="240" y2="105" stroke="#E2E8F0" stroke-width="2"/>
-                <line x1="120" y1="130" x2="200" y2="130" stroke="#E2E8F0" stroke-width="2"/>
-                <text x="30" y="40" fill="#E2E8F0" font-family="sans-serif" font-weight="bold" font-size="14">Newsletter & Lead Magnets</text>
-              </svg>
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Lead Nurturing Newsletter Sequence</h3>
-              <p class="portfolio-desc" style="margin-bottom: 16px;">
-                Drafted a 5-step automated email welcome sequence and lead magnet PDF to educate incoming cold contacts and push them to book a phone audit call.
-              </p>
-              <div style="font-size: 12px; margin-bottom: 16px; color: var(--color-secondary);">
-                <strong>Tools:</strong> Mailchimp, Google Docs, Canva
-              </div>
-              <div class="portfolio-stats-grid" style="border-top: 1px dashed rgba(255,255,255,0.06); padding-top: 12px;">
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">5 Stages</div>
-                  <div class="portfolio-stat-lbl">Funnel Steps</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">28%</div>
-                  <div class="portfolio-stat-lbl">Target Open Rate</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">PDF</div>
-                  <div class="portfolio-stat-lbl">Lead Asset</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 4: Ad Campaign Sample Project -->
-        <div class="reveal" style="transition-delay: 0.15s;">
-          <div class="glass-card portfolio-card">
-            <div class="portfolio-img-wrapper">
-              <span class="portfolio-tag">Paid Search Mockup</span>
-              <svg class="portfolio-img" viewBox="0 0 400 220" style="background: linear-gradient(135deg, #1a0f30, #0A192F);">
-                <rect x="60" y="60" width="280" height="110" rx="6" fill="#112240" stroke="rgba(255,255,255,0.08)"/>
-                <rect x="80" y="80" width="120" height="20" rx="3" fill="#D4AF37"/>
-                <line x1="80" y1="120" x2="320" y2="120" stroke="#38BDF8" stroke-width="3"/>
-                <line x1="80" y1="140" x2="220" y2="140" stroke="#E2E8F0" stroke-width="2"/>
-                <text x="30" y="45" fill="#E2E8F0" font-family="sans-serif" font-weight="bold" font-size="14">Google Ads Ad-Group Sandbox</text>
-              </svg>
-            </div>
-            <div class="portfolio-body">
-              <h3 class="portfolio-title">Shoe Store Google Search Ad Mockup</h3>
-              <p class="portfolio-desc" style="margin-bottom: 16px;">
-                Configured keywords, match settings, and negative phrases. Drafted three responsive ad search creatives optimized for conversion.
-              </p>
-              <div style="font-size: 12px; margin-bottom: 16px; color: var(--color-secondary);">
-                <strong>Tools:</strong> Google Ads Account, Excel
-              </div>
-              <div class="portfolio-stats-grid" style="border-top: 1px dashed rgba(255,255,255,0.06); padding-top: 12px;">
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">3 Groups</div>
-                  <div class="portfolio-stat-lbl">Campaign Setup</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">9 Ads</div>
-                  <div class="portfolio-stat-lbl">Creatives Drafted</div>
-                </div>
-                <div class="portfolio-stat">
-                  <div class="portfolio-stat-val">Exact/Phrase</div>
-                  <div class="portfolio-stat-lbl">Match Types</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="projects" class="portfolio" style="background-color: var(--bg-secondary);"></section>
 
   <!-- ==========================================
-     TOOLS & PLATFORMS SECTION
+     CREATIVE WORKS GALLERY SECTION (Dynamic)
      ========================================== -->
-  <section id="tools" class="tools-platforms">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Technical Arsenal</span>
-        <h2 class="section-title">Tools & Platforms</h2>
-      </div>
-      
-      <div class="skills-grid" style="grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); text-align: center; gap: 20px;">
-        <!-- Tool 1: GA -->
-        <div class="reveal">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-gold); font-size: 26px; margin-bottom: 8px;">GA4</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">Google Analytics</div>
-          </div>
-        </div>
-        
-        <!-- Tool 2: Google Ads -->
-        <div class="reveal" style="transition-delay: 0.05s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-blue); font-size: 26px; margin-bottom: 8px;">Ads</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">Google Ads</div>
-          </div>
-        </div>
-        
-        <!-- Tool 3: Meta Business -->
-        <div class="reveal" style="transition-delay: 0.1s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-indigo); font-size: 26px; margin-bottom: 8px;">Meta</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">Business Suite</div>
-          </div>
-        </div>
-        
-        <!-- Tool 4: Canva -->
-        <div class="reveal" style="transition-delay: 0.15s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-gold); font-size: 26px; margin-bottom: 8px;">Canva</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">Graphic Design</div>
-          </div>
-        </div>
-        
-        <!-- Tool 5: SEMrush -->
-        <div class="reveal" style="transition-delay: 0.2s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-blue); font-size: 26px; margin-bottom: 8px;">SEMrush</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">SEO Analysis</div>
-          </div>
-        </div>
-        
-        <!-- Tool 6: Ahrefs -->
-        <div class="reveal" style="transition-delay: 0.25s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-indigo); font-size: 26px; margin-bottom: 8px;">Ahrefs</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">Backlink Audit</div>
-          </div>
-        </div>
-        
-        <!-- Tool 7: WordPress -->
-        <div class="reveal" style="transition-delay: 0.3s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-gold); font-size: 26px; margin-bottom: 8px;">WP</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">WordPress CMS</div>
-          </div>
-        </div>
-        
-        <!-- Tool 8: ChatGPT -->
-        <div class="reveal" style="transition-delay: 0.35s;">
-          <div class="glass-card" style="padding: 20px; transition: var(--transition-fast);">
-            <div style="font-family: var(--font-heading); font-weight: bold; color: var(--accent-blue); font-size: 26px; margin-bottom: 8px;">AI</div>
-            <div style="font-size: 12px; color: var(--color-white); font-weight: 600;">ChatGPT & Copy</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="gallery" class="gallery-section"></section>
 
   <!-- ==========================================
-     WHY HIRE ME SECTION
+     TOOLS & PLATFORMS SECTION (Dynamic)
      ========================================== -->
-  <section id="why-hire-me" class="why-hire-me" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Key Attributes</span>
-        <h2 class="section-title">Why Hire Me?</h2>
-      </div>
-      
-      <div class="portfolio-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
-        <!-- Card 1: Quick Learner -->
-        <div class="reveal">
-          <div class="glass-card service-card">
-            <div class="service-icon-wrapper" style="width: 50px; height: 50px; margin-bottom: 18px;">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Quick Learner</h3>
-            <p style="color: var(--color-secondary); font-size: 13.5px;">
-              Fast adoption of emerging algorithms, features, and ad platforms. Eager to master customized team guidelines and workflow tools.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Card 2: Creative Thinker -->
-        <div class="reveal" style="transition-delay: 0.05s;">
-          <div class="glass-card service-card">
-            <div class="service-icon-wrapper" style="width: 50px; height: 50px; margin-bottom: 18px;">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Creative Thinker</h3>
-            <p style="color: var(--color-secondary); font-size: 13.5px;">
-              Focus on drafting attention-grabbing headline angles, copywriting hooks, and visual formats that stand out in crowded feeds.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Card 3: Data-Driven Approach -->
-        <div class="reveal" style="transition-delay: 0.1s;">
-          <div class="glass-card service-card">
-            <div class="service-icon-wrapper" style="width: 50px; height: 50px; margin-bottom: 18px;">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Data-Driven Approach</h3>
-            <p style="color: var(--color-secondary); font-size: 13.5px;">
-              Analyzing metrics like CTR, bounce rates, and cost-per-lead to find out which creative formats or landing pages perform best.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Card 4: Strong Communication -->
-        <div class="reveal">
-          <div class="glass-card service-card">
-            <div class="service-icon-wrapper" style="width: 50px; height: 50px; margin-bottom: 18px;">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Strong Communication</h3>
-            <p style="color: var(--color-secondary); font-size: 13.5px;">
-              Ensuring campaign reports, content copy, and team presentations remain clear, professional, and aligned with core client goals.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Card 5: Passion for Marketing -->
-        <div class="reveal" style="transition-delay: 0.05s;">
-          <div class="glass-card service-card">
-            <div class="service-icon-wrapper" style="width: 50px; height: 50px; margin-bottom: 18px;">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Passion for Marketing</h3>
-            <p style="color: var(--color-secondary); font-size: 13.5px;">
-              Genuinely thrilled by online brand growth, customer acquisition funnel mapping, and analyzing visual design elements.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Card 6: Up-to-date with Industry Trends -->
-        <div class="reveal" style="transition-delay: 0.1s;">
-          <div class="glass-card service-card">
-            <div class="service-icon-wrapper" style="width: 50px; height: 50px; margin-bottom: 18px;">
-              <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-              </svg>
-            </div>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Up-to-date with Trends</h3>
-            <p style="color: var(--color-secondary); font-size: 13.5px;">
-              Keeping track of Google algorithm core updates, Meta ad format testing, AI copy integrations, and short-form video strategies.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="tools" class="tools-platforms"></section>
 
   <!-- ==========================================
-     TESTIMONIALS SECTION
+     RESUME & CV SECTION (Dynamic)
      ========================================== -->
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Feedback</span>
-        <h2 class="section-title">Mentor & Trainer Endorsements</h2>
-      </div>
-      
-      <div class="testimonial-slider-container reveal">
-        <div class="testimonial-track">
-          <!-- Slide 1 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p class="testimonial-quote">
-                Mohammed is one of the most proactive learners I've mentored. His final capstone campaign project demonstrated a level of audience research and tool mastery that goes far beyond entry-level expectations. He is ready to bring immediate value to any marketing team.
-              </p>
-              <div class="testimonial-client">
-                <div class="testimonial-client-avatar" style="display: flex; align-items: center; justify-content: center; background: #112240; color: #D4AF37; font-family: var(--font-heading); font-weight: bold;">MV</div>
-                <div>
-                  <h4 class="testimonial-client-name">Prof. Marcus Vance</h4>
-                  <p class="testimonial-client-role">Lead Marketing Mentor, Digital Growth Institute</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Slide 2 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p class="testimonial-quote">
-                Mohammed has a natural affinity for data analytics. His technical SEO website audit project was detailed, actionable, and showed strong analytical capability. He is incredibly thorough and works diligently to troubleshoot tracking metrics and crawl path bottlenecks.
-              </p>
-              <div class="testimonial-client">
-                <div class="testimonial-client-avatar" style="display: flex; align-items: center; justify-content: center; background: #112240; color: #D4AF37; font-family: var(--font-heading); font-weight: bold;">ER</div>
-                <div>
-                  <h4 class="testimonial-client-name">Dr. Elena Rostova</h4>
-                  <p class="testimonial-client-role">Academic Advisor, Department of E-Commerce</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Slide 3 -->
-          <div class="testimonial-slide">
-            <div class="testimonial-card">
-              <p class="testimonial-quote">
-                During his digital marketing internship, Mohammed demonstrated an outstanding work ethic. He picked up Meta Business Suite campaign setups quickly, draft creatives easily, and was always eager to apply feedback. His positive attitude and communication skills are excellent assets.
-              </p>
-              <div class="testimonial-client">
-                <div class="testimonial-client-avatar" style="display: flex; align-items: center; justify-content: center; background: #112240; color: #D4AF37; font-family: var(--font-heading); font-weight: bold;">LC</div>
-                <div>
-                  <h4 class="testimonial-client-name">Lisa Cole</h4>
-                  <p class="testimonial-client-role">Marketing Lead, Apex Digital Agency</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Slider Navigation Controls -->
-        <div class="testimonial-controls">
-          <button class="slider-btn slider-btn-prev" aria-label="Previous Slide">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn slider-btn-next" aria-label="Next Slide">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="resume" class="resume" style="background-color: var(--bg-secondary);"></section>
 
   <!-- ==========================================
-     RESUME / EDUCATION SECTION
+     CONTACT SECTION (Dynamic)
      ========================================== -->
-  <section id="resume" class="resume" style="background-color: var(--bg-secondary);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Milestones</span>
-        <h2 class="section-title">Education & Milestones</h2>
-      </div>
-      
-      <div class="resume-layout">
-        <!-- Education & Experience Timeline -->
-        <div class="reveal">
-          <h3 style="font-family: var(--font-heading); font-size: 22px; color: var(--color-white); margin-bottom: 30px;">Education & Experience Timeline</h3>
-          <div class="resume-timeline">
-            
-            <!-- Experience 1 -->
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <span class="timeline-duration">Summer 2026</span>
-              <h4 class="timeline-title">Digital Marketing Intern</h4>
-              <div class="timeline-company">EDUVATE 2.0</div>
-              <p class="timeline-desc">
-                Supported digital marketing initiatives aimed at increasing brand awareness and audience reach. Developed engaging content for social media platforms and promotional campaigns. Assisted in content planning, campaign execution, and online community engagement. Applied SEO, SMM, and content marketing principles in real-world projects.
-              </p>
-            </div>
-            
-            <!-- Experience 2 -->
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <span class="timeline-duration">2025 - Present</span>
-              <h4 class="timeline-title">Freelance Digital Marketer</h4>
-              <div class="timeline-company">Self-Employed (Election Works)</div>
-              <p class="timeline-desc">
-                Managed digital marketing projects for small businesses and personal brands. Created and optimized social media marketing campaigns, assisting clients in improving online visibility and audience engagement.
-              </p>
-            </div>
-
-            <!-- Degree 1 -->
-            <div class="timeline-item">
-              <div class="timeline-marker"></div>
-              <span class="timeline-duration">2023 - 2026</span>
-              <h4 class="timeline-title">Bachelor of Business Administration in Finance</h4>
-              <div class="timeline-company">Calicut University (CGPA: 4.96)</div>
-              <p class="timeline-desc">
-                Acquired solid knowledge in financial analysis, statistics, corporate management, and market dynamics. Extrapolated business and finance theories into data-driven marketing metrics and performance campaigns.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Sidebar - Certs & Action -->
-        <div class="resume-sidebar reveal" style="transition-delay: 0.2s;">
-          <!-- CV Card -->
-          <div class="glass-card resume-card" style="text-align: center;">
-            <svg style="width: 48px; height: 48px; color: var(--accent-gold); margin: 0 auto 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <h4 class="resume-card-title" style="border:none; padding: 0; margin-bottom: 12px;">Curriculum Vitae</h4>
-            <p style="font-size: 13px; color: var(--color-secondary); margin-bottom: 24px;">
-              Download or preview my complete professional CV mapping out my academic history, tools competence, and core digital marketing course certifications.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
-              <button id="btnPreviewCV" class="btn btn-secondary" style="width: 100%;">Preview CV</button>
-              <a href="./cv.jpg" download="Mohammed_Adnan_CV.jpg" class="btn btn-solid" style="width: 100%;">Download Resume</a>
-            </div>
-          </div>
-          
-          <!-- Cert Timeline -->
-          <div class="glass-card resume-card">
-            <h4 class="resume-card-title">Certification Timeline</h4>
-            <div class="cert-list">
-              <div class="cert-item">
-                <span style="font-size: 11px; font-weight: bold; color: var(--accent-gold); width: 60px; flex-shrink: 0; margin-top: 2px;">2026</span>
-                <div>
-                  <div class="cert-title" style="font-size: 13.5px;">Google Digital Marketing Professional</div>
-                  <div class="cert-issuer" style="font-size: 11.5px;">Google Skillshop</div>
-                </div>
-              </div>
-              
-              <div class="cert-item">
-                <span style="font-size: 11px; font-weight: bold; color: var(--accent-gold); width: 60px; flex-shrink: 0; margin-top: 2px;">2026</span>
-                <div>
-                  <div class="cert-title" style="font-size: 13.5px;">GA4 Individual Qualification</div>
-                  <div class="cert-issuer" style="font-size: 11.5px;">Google Analytics GAIQ</div>
-                </div>
-              </div>
-              
-              <div class="cert-item">
-                <span style="font-size: 11px; font-weight: bold; color: var(--accent-gold); width: 60px; flex-shrink: 0; margin-top: 2px;">2025</span>
-                <div>
-                  <div class="cert-title" style="font-size: 13.5px;">Meta Blueprint Media Buying</div>
-                  <div class="cert-issuer" style="font-size: 11.5px;">Meta Blueprint Academy</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-     CONTACT SECTION
-     ========================================== -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-subtitle">Let's Connect</span>
-        <h2 class="section-title">Start a Conversation</h2>
-      </div>
-      
-      <div class="contact-grid">
-        <!-- Contact details -->
-        <div class="reveal">
-          <div class="contact-info-list" style="margin-bottom: 40px;">
-            <!-- Email -->
-            <div class="contact-info-card">
-              <div class="contact-info-icon-wrapper">
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-info-label">Email Direct</div>
-                <a href="mailto:adnanmohammed9744@gmail.com" class="contact-info-value">adnanmohammed9744@gmail.com</a>
-              </div>
-            </div>
-            
-            <!-- Phone -->
-            <div class="contact-info-card">
-              <div class="contact-info-icon-wrapper">
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.996.808H10a2 2 0 012 2v.068a2 2 0 01-.194.884l-.315.63a1 1 0 00-.097.836l.548 2.2a1 1 0 01.037.33v3.18a2 2 0 01-2 2H10a8 8 0 01-8-8V5z"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-info-label">Call / WhatsApp</div>
-                <a href="https://wa.me/919744273307" target="_blank" class="contact-info-value">+91 97442 73307</a>
-              </div>
-            </div>
-            
-            <!-- LinkedIn -->
-            <div class="contact-info-card">
-              <div class="contact-info-icon-wrapper">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8h2.8v-4.87c0-.26.05-.52.12-.7a1.11 1.11 0 0 1 1-.76c.77 0 .93.58.93 1.43v4.9h2.8M6.5 8.37a1.37 1.37 0 1 0 0-2.75 1.37 1.37 0 0 0 0 2.75M8 18.5v-8H5v8h3z"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-info-label">LinkedIn Profile</div>
-                <a href="https://linkedin.com/in/7mohammedadnan-7736" target="_blank" class="contact-info-value">linkedin.com/in/7mohammedadnan-7736</a>
-              </div>
-            </div>
-            
-            <!-- Location -->
-            <div class="contact-info-card">
-              <div class="contact-info-icon-wrapper">
-                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-info-label">Location</div>
-                <span class="contact-info-value">Malappuram, Kerala</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="glass-card" style="padding: 24px;">
-            <h4 style="font-family: var(--font-heading); font-size: 16px; color: var(--color-white); margin-bottom: 8px;">Opportunities Welcomed</h4>
-            <p style="font-size: 13px; color: var(--color-secondary);">
-              I am actively looking for internship positions, entry-level specialist roles, and collaborative projects. If you are hiring or would like to run a trial project, feel free to drop a message!
-            </p>
-          </div>
-        </div>
-        
-        <!-- Contact form -->
-        <div class="reveal" style="transition-delay: 0.2s;">
-          <div class="glass-card">
-            <form id="portfolioContactForm" class="contact-form">
-              <!-- Name -->
-              <div>
-                <label for="formName" class="form-label">Full Name *</label>
-                <input type="text" id="formName" class="form-input" placeholder="e.g. John Doe" required>
-              </div>
-              
-              <!-- Email -->
-              <div>
-                <label for="formEmail" class="form-label">Email Address *</label>
-                <input type="email" id="formEmail" class="form-input" placeholder="e.g. john@company.com" required>
-              </div>
-              
-              <!-- Service Requirement -->
-              <div>
-                <label for="formService" class="form-label">Marketing Help Needed</label>
-                <select id="formService" class="form-select">
-                  <option value="SEO Support">SEO Optimization</option>
-                  <option value="Social Content Strategy">Social Media Content</option>
-                  <option value="Ad Campaign Audit">Ad Campaign Help</option>
-                  <option value="General Entry-level Inquiry">General Recruitment / Hire</option>
-                </select>
-              </div>
-              
-              <!-- Budget -->
-              <div>
-                <label for="formBudget" class="form-label">Monthly Target Budget</label>
-                <select id="formBudget" class="form-select">
-                  <option value="Under $1k">Under $1,000 /mo</option>
-                  <option value="$1k - $3k">$1,000 - $3,000 /mo</option>
-                  <option value="Not Applicable">Recruitment / Project Trial</option>
-                </select>
-              </div>
-              
-              <!-- Message -->
-              <div class="form-group-full">
-                <label for="formMessageText" class="form-label">Message Details *</label>
-                <textarea id="formMessageText" class="form-textarea" placeholder="Detail your project goals or mention the open marketing role..." required></textarea>
-              </div>
-              
-              <!-- Form Success/Error Message Container -->
-              <div id="formMessage" class="form-message"></div>
-              
-              <!-- Submit btn -->
-              <div class="form-btn-wrapper">
-                <button type="submit" class="btn btn-solid">Send Message</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id="contact" class="contact"></section>
 
   <!-- ==========================================
      FOOTER
-     ========================================= -->
+     ========================================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-logo">MOHAMMED<span>ADNAN.</span></div>
+      <div class="footer-logo">M. ADNAN<span>.P</span></div>
       
-      <div class="footer-socials">
-        <!-- LinkedIn Link -->
-        <a href="https://linkedin.com/in/7mohammedadnan-7736" target="_blank" class="footer-social-link" aria-label="LinkedIn Contact">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8h2.8v-4.87c0-.26.05-.52.12-.7a1.11 1.11 0 0 1 1-.76c.77 0 .93.58.93 1.43v4.9h2.8M6.5 8.37a1.37 1.37 0 1 0 0-2.75 1.37 0 0 0 0 2.75M8 18.5v-8H5v8h3z"/>
-          </svg>
-        </a>
-        <!-- Instagram -->
-        <a href="https://instagram.com/mr_adnnn" target="_blank" class="footer-social-link" aria-label="Instagram Profile">
-          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-          </svg>
-        </a>
+      <div class="footer-socials" id="footerSocials"></div>
+      
+      <div style="width: 100%; display: flex; justify-content: center;">
+        <span id="footerAdminLink" class="footer-admin-link">Admin Dashboard</span>
       </div>
       
-      <p class="footer-copyright">
-        &copy; 2026 Mohammed Adnan. All rights reserved. Brand architecture and portfolio strategy by Antigravity.
-      </p>
+      <p class="footer-copyright" id="footerCopyright"></p>
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/919744273307" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 2.023 14.07 1 11.993 1 6.557 1 2.131 5.37 2.128 10.799c-.001 1.77.476 3.498 1.38 5.048l-.995 3.637 3.534-.93zm8.373-3.377c-.253-.127-1.498-.738-1.73-.822-.232-.085-.401-.127-.57.127-.168.254-.652.822-.799.99-.148.169-.296.19-.55.063-.253-.127-1.07-.394-2.037-1.256-.753-.671-1.26-1.502-1.408-1.756-.148-.254-.016-.392.111-.518.114-.114.254-.296.38-.444.127-.148.17-.254.254-.423.085-.169.042-.317-.02-.444-.064-.127-.57-1.373-.78-1.884-.206-.496-.412-.429-.57-.429-.147-.008-.317-.008-.487-.008-.17 0-.444.064-.677.317-.232.254-.887.867-.887 2.112 0 1.246.908 2.449 1.035 2.618.127.169 1.786 2.727 4.327 3.822.604.261 1.077.417 1.444.534.607.193 1.158.165 1.594.1.486-.072 1.498-.612 1.71-1.204.212-.592.212-1.1.149-1.204-.064-.106-.233-.169-.487-.296z"/>
-    </svg>
-  </a>
+  <!-- Floating WhatsApp Button (Dynamic) -->
+  <div id="whatsappFloatContainer"></div>
 
-  <!-- JS Logic -->
   <!-- CV Preview Modal -->
   <div id="cvModal" class="cv-modal">
-    <span class="cv-modal-close">&times;</span>
+    <span class="cv-modal-close" id="cvModalClose">&times;</span>
     <div class="cv-modal-content-wrapper">
-      <img class="cv-modal-content" id="imgModalCV" src="./cv.jpg" alt="Mohammed Adnan CV Resume">
-      <a href="./cv.jpg" download="Mohammed_Adnan_CV.jpg" class="btn btn-solid cv-modal-download">
+      <img class="cv-modal-content" id="imgModalCV" src="" alt="Mohammed Adnan P CV Resume">
+      <a href="" id="btnDownloadCVModal" download="Mohammed_Adnan_CV.jpg" class="btn btn-solid cv-modal-download">
         <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
         </svg>
@@ -1111,67 +136,474 @@
     </div>
   </div>
 
-  <!-- JS Logic -->
-  <script type="module" src="./main.js"></script>
+  <!-- Gallery Lightbox Modal -->
+  <div id="galleryModal" class="gallery-modal">
+    <span class="gallery-modal-close" id="galleryModalClose">&times;</span>
+    <div class="gallery-modal-content-wrapper">
+      <img class="gallery-modal-content" id="imgModalGallery" src="" alt="Creative Work Preview">
+      <div class="gallery-modal-caption" id="captionModalGallery"></div>
+    </div>
+  </div>
 
-  <!-- Local Fallback: If main JS fails to load (CORS block on file:// protocol), reveal page elements -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        if (!window.portfolioInitialized) {
-          console.warn('Local fallback activated: ES module was blocked (likely CORS / file:// protocol).');
-          
-          // Reveal all sections
-          var reveals = document.querySelectorAll('.reveal');
-          for (var i = 0; i < reveals.length; i++) {
-            reveals[i].classList.add('active');
-          }
-          
-          // Make skill bars animate
-          var skillBars = document.querySelectorAll('.skill-bar-fill');
-          for (var j = 0; j < skillBars.length; j++) {
-            var percent = skillBars[j].getAttribute('data-percent');
-            if (percent) {
-              skillBars[j].style.width = percent + '%';
-            }
-          }
-          
-          // Basic Mobile Menu toggle
-          var toggle = document.querySelector('.mobile-nav-toggle');
-          var menu = document.querySelector('.nav-menu');
-          if (toggle && menu) {
-            toggle.addEventListener('click', function() {
-              toggle.classList.toggle('active');
-              menu.classList.toggle('active');
-            });
-          }
+  <!-- ==========================================
+     ADMIN AUTHENTICATION PASSCODE MODAL
+     ========================================== -->
+  <div id="adminAuthBackdrop" class="admin-auth-backdrop">
+    <div class="glass-card admin-auth-card">
+      <h3 class="admin-auth-title">Admin Access Portal</h3>
+      <p class="admin-auth-desc">Please enter the passcode to access the website customizer and dynamic manager.</p>
+      <input type="password" id="adminPasscodeField" class="admin-auth-input" placeholder="••••••••" maxlength="15">
+      <div id="adminAuthError" class="admin-auth-err">Incorrect passcode. Please try again.</div>
+      <div class="admin-auth-actions">
+        <button id="adminAuthCancelBtn" class="btn btn-secondary">Cancel</button>
+        <button id="adminAuthSubmitBtn" class="btn btn-solid">Unlock</button>
+      </div>
+    </div>
+  </div>
 
-          // Basic CV Preview Modal
-          var cvModal = document.getElementById('cvModal');
-          var btnPreview = document.getElementById('btnPreviewCV');
-          var btnClose = document.querySelector('.cv-modal-close');
-          if (cvModal && btnPreview) {
-            btnPreview.addEventListener('click', function(e) {
-              e.preventDefault();
-              cvModal.style.display = 'block';
-              document.body.style.overflow = 'hidden';
-            });
-          }
-          if (btnClose && cvModal) {
-            btnClose.addEventListener('click', function() {
-              cvModal.style.display = 'none';
-              document.body.style.overflow = 'auto';
-            });
-            cvModal.addEventListener('click', function(e) {
-              if (e.target === cvModal) {
-                cvModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-              }
-            });
-          }
-        }
-      }, 500);
-    });
-  </script>
+  <!-- ==========================================
+     ADMIN DASHBOARD CMS OVERLAY
+     ========================================== -->
+  <div id="adminDashboardPanel" class="admin-dashboard-panel">
+    <div class="admin-nav-bar">
+      <div class="admin-nav-logo">M. ADNAN<span>.CMS</span></div>
+      <div class="admin-nav-actions">
+        <button id="adminBtnReset" class="admin-nav-btn btn-secondary">Reset defaults</button>
+        <button id="adminBtnSave" class="admin-nav-btn btn-solid" style="background: linear-gradient(135deg, #10B981, #00F0FF);">Save Changes</button>
+        <button id="adminBtnExit" class="admin-nav-btn btn-secondary">Exit Panel</button>
+      </div>
+    </div>
+    
+    <div class="admin-body-layout">
+      <!-- Side Menu Navigation -->
+      <div class="admin-side-menu">
+        <div class="admin-menu-item active" data-tab="tab-profile">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          Profile & Bio
+        </div>
+        <div class="admin-menu-item" data-tab="tab-assets">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          Avatar & CV Upload
+        </div>
+        <div class="admin-menu-item" data-tab="tab-skills">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+          </svg>
+          Skills Manager
+        </div>
+        <div class="admin-menu-item" data-tab="tab-projects">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Projects Manager
+        </div>
+        <div class="admin-menu-item" data-tab="tab-tools">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          Tools Manager
+        </div>
+
+        <div class="admin-menu-item" data-tab="tab-gallery">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          Gallery Manager
+        </div>
+
+        <div class="admin-menu-item" data-tab="tab-theme">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+          </svg>
+          Theme Settings
+        </div>
+      </div>
+      
+      <!-- Content Area -->
+      <div class="admin-content-area">
+        
+        <!-- Tab: Profile -->
+        <div class="admin-tab-pane active" id="tab-profile">
+          <h2 class="admin-pane-title">Profile & Bio Customizer</h2>
+          <p class="admin-pane-desc">Edit your personal identity details, career objectives, qualification milestone, and contact information.</p>
+          
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label class="admin-label">Full Name</label>
+              <input type="text" id="admName" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Professional Title</label>
+              <input type="text" id="admTitle" class="admin-input">
+            </div>
+          </div>
+          
+          <div class="admin-form-group">
+            <label class="admin-label">Hero Introduction Statement</label>
+            <textarea id="admHeroIntro" class="admin-textarea"></textarea>
+          </div>
+          
+          <div class="admin-form-group">
+            <label class="admin-label">About Me Main Bio</label>
+            <textarea id="admAboutBio" class="admin-textarea" style="min-height: 140px;"></textarea>
+          </div>
+
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label class="admin-label">Qualification Details</label>
+              <input type="text" id="admQualification" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Location</label>
+              <input type="text" id="admLocation" class="admin-input">
+            </div>
+          </div>
+          
+          <h3 class="admin-auth-title" style="text-align:left; font-size:16px; margin: 30px 0 15px; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:8px;">Contact & Social Network Profiles</h3>
+          
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label class="admin-label">Phone Number</label>
+              <input type="text" id="admPhone" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Email Address</label>
+              <input type="email" id="admEmail" class="admin-input">
+            </div>
+          </div>
+          
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label class="admin-label">LinkedIn Profile URL</label>
+              <input type="text" id="admLinkedIn" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Instagram Profile URL</label>
+              <input type="text" id="admInstagram" class="admin-input">
+            </div>
+          </div>
+
+          <h3 class="admin-auth-title" style="text-align:left; font-size:16px; margin: 30px 0 15px; border-bottom:1px solid rgba(255,255,255,0.06); padding-bottom:8px;">Achievement Metrics Stats Bar</h3>
+          
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label class="admin-label">Stat 1 (Value / Label)</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="admStatVal1" class="admin-input" placeholder="e.g. 5+">
+                <input type="text" id="admStatLbl1" class="admin-input" placeholder="e.g. Simulated Ad Campaigns">
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Stat 2 (Value / Label)</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="admStatVal2" class="admin-input" placeholder="e.g. 15k+">
+                <input type="text" id="admStatLbl2" class="admin-input" placeholder="e.g. Organic Traffic Reach">
+              </div>
+            </div>
+          </div>
+          
+          <div class="admin-form-row">
+            <div class="admin-form-group">
+              <label class="admin-label">Stat 3 (Value / Label)</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="admStatVal3" class="admin-input" placeholder="e.g. 4+">
+                <input type="text" id="admStatLbl3" class="admin-input" placeholder="e.g. Verified Certifications">
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Stat 4 (Value / Label)</label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="admStatVal4" class="admin-input" placeholder="e.g. 92%">
+                <input type="text" id="admStatLbl4" class="admin-input" placeholder="e.g. Average SEO Audit Score">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tab: Assets -->
+        <div class="admin-tab-pane" id="tab-assets">
+          <h2 class="admin-pane-title">Visual Assets Manager</h2>
+          <p class="admin-pane-desc">Upload or replace your portfolio profile picture avatar and your download/preview CV image resume.</p>
+          
+          <div class="admin-form-row" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <!-- Avatar Upload -->
+            <div class="cms-manager-box">
+              <label class="admin-label" style="margin-bottom: 12px; font-size: 12px;">Profile Avatar Picture</label>
+              <div class="admin-file-upload">
+                <svg class="admin-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="admin-upload-text">Upload Profile Photo</div>
+                <div class="admin-upload-subtext">Supports PNG, JPG, JPEG (Max 1MB)</div>
+                <input type="file" id="uploadAvatarInput" accept="image/*">
+              </div>
+              <img id="previewAvatar" class="admin-upload-preview" alt="Avatar Preview">
+            </div>
+            
+            <!-- CV Upload -->
+            <div class="cms-manager-box">
+              <label class="admin-label" style="margin-bottom: 12px; font-size: 12px;">CV Document (Image format)</label>
+              <div class="admin-file-upload">
+                <svg class="admin-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <div class="admin-upload-text">Upload CV Image</div>
+                <div class="admin-upload-subtext">Supports JPG, JPEG, PNG (Max 1.5MB)</div>
+                <input type="file" id="uploadCVInput" accept="image/*">
+              </div>
+              <img id="previewCV" class="admin-upload-preview" alt="CV Preview">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tab: Skills -->
+        <div class="admin-tab-pane" id="tab-skills">
+          <h2 class="admin-pane-title">Skills & Competency CMS</h2>
+          <p class="admin-pane-desc">Manage the technical marketing skills displayed on your main page with interactive progress percentages.</p>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Add New Skill</h3>
+            <div class="admin-form-row">
+              <div class="admin-form-group">
+                <label class="admin-label">Skill Name</label>
+                <input type="text" id="newSkillName" class="admin-input" placeholder="e.g. Email Marketing">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Proficiency Level (%)</label>
+                <div style="display: flex; align-items: center; gap: 12px; margin-top: 4px;">
+                  <input type="range" id="newSkillPercent" min="30" max="100" value="85" style="flex-grow: 1; accent-color: var(--accent-blue);">
+                  <span id="skillPercentBubble" style="font-family: var(--font-heading); font-weight: 700; color: var(--accent-blue); width: 36px; text-align:right;">85%</span>
+                </div>
+              </div>
+            </div>
+            <button id="btnAddNewSkill" class="btn btn-solid" style="width: auto; min-height: 38px; padding: 6px 20px; font-size: 12px; margin-top: 10px;">Add Skill to list</button>
+          </div>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Active Skills Directory</h3>
+            <div class="cms-items-list" id="admSkillsList"></div>
+          </div>
+        </div>
+        
+        <!-- Tab: Projects -->
+        <div class="admin-tab-pane" id="tab-projects">
+          <h2 class="admin-pane-title">Projects & Campaign Case Studies CMS</h2>
+          <p class="admin-pane-desc">Add, edit, or delete digital marketing campaigns, strategies, mockups, and client-impressing performance metrics.</p>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px; border-bottom: 1px dashed rgba(255,255,255,0.06); padding-bottom:8px;" id="projectFormHeader">Create New Project</h3>
+            <input type="hidden" id="editProjectIndex" value="">
+            
+            <div class="admin-form-row">
+              <div class="admin-form-group">
+                <label class="admin-label">Project Title</label>
+                <input type="text" id="projTitle" class="admin-input" placeholder="e.g. SEO Organic Growth Capstone">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Category / Tag</label>
+                <input type="text" id="projTag" class="admin-input" placeholder="e.g. SEO Campaign">
+              </div>
+            </div>
+            
+            <div class="admin-form-group">
+              <label class="admin-label">Brief Campaign Strategy Description</label>
+              <textarea id="projDesc" class="admin-textarea" placeholder="Outline the marketing problem, client goal, and your technical execution method..."></textarea>
+            </div>
+            
+            <div class="admin-form-row">
+              <div class="admin-form-group">
+                <label class="admin-label">Tools & Platforms Used</label>
+                <input type="text" id="projTools" class="admin-input" placeholder="e.g. GA4, GSC, Yoast SEO, Screaming Frog">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Visual Backdrop Design (Gradient Select)</label>
+                <select id="projImagePreset" class="admin-select">
+                  <option value="seo">SEO Analytics (Deep Blue - Gold Curve)</option>
+                  <option value="smm">Social Media Campaign (Slate - Neon Circle)</option>
+                  <option value="content">Content Funnel Sequence (Navy - Emerald Plate)</option>
+                  <option value="ads">Search Ads Account Setup (Dark Purple - Blue Lines)</option>
+                </select>
+              </div>
+            </div>
+            
+            <h4 class="admin-label" style="margin: 15px 0 10px; color: var(--accent-blue);">Campaign Result Metrics (3 KPIs)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px; color: var(--color-secondary);">KPI 1 (e.g. Value: +120%, Label: Organic traffic)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="projStatVal1" class="admin-input" placeholder="Value" style="width: 80px;">
+                  <input type="text" id="projStatLbl1" class="admin-input" placeholder="Label" style="flex-grow: 1;">
+                </div>
+              </div>
+              
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px; color: var(--color-secondary);">KPI 2 (e.g. Value: 4.2x, Label: Mock ROAS)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="projStatVal2" class="admin-input" placeholder="Value" style="width: 80px;">
+                  <input type="text" id="projStatLbl2" class="admin-input" placeholder="Label" style="flex-grow: 1;">
+                </div>
+              </div>
+              
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px; color: var(--color-secondary);">KPI 3 (e.g. Value: 92, Label: Audit Score)</label>
+                <div style="display: flex; gap: 8px;">
+                  <input type="text" id="projStatVal3" class="admin-input" placeholder="Value" style="width: 80px;">
+                  <input type="text" id="projStatLbl3" class="admin-input" placeholder="Label" style="flex-grow: 1;">
+                </div>
+              </div>
+            </div>
+            
+            <div style="display: flex; gap: 12px; margin-top: 10px;">
+              <button id="btnSaveProject" class="btn btn-solid" style="width: auto; min-height: 38px; padding: 6px 20px; font-size: 12px;">Save Project</button>
+              <button id="btnCancelEditProject" class="btn btn-secondary" style="width: auto; min-height: 38px; padding: 6px 20px; font-size: 12px; display: none;">Cancel Edit</button>
+            </div>
+          </div>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Active Projects & Case Studies</h3>
+            <div class="cms-items-list" id="admProjectsList"></div>
+          </div>
+        </div>
+        
+        <!-- Tab: Tools -->
+        <div class="admin-tab-pane" id="tab-tools">
+          <h2 class="admin-pane-title">Tools & Software CMS</h2>
+          <p class="admin-pane-desc">Manage the tools and platforms displayed on your main page with dynamic name abbreviations and full descriptions.</p>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Add New Tool</h3>
+            <div class="admin-form-row">
+              <div class="admin-form-group">
+                <label class="admin-label">Tool Abbreviation / Icon Text</label>
+                <input type="text" id="newToolName" class="admin-input" placeholder="e.g. Ps">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Full Tool/Software Name</label>
+                <input type="text" id="newToolDesc" class="admin-input" placeholder="e.g. Adobe Photoshop">
+              </div>
+            </div>
+            <button id="btnAddNewTool" class="btn btn-solid" style="width: auto; min-height: 38px; padding: 6px 20px; font-size: 12px; margin-top: 10px;">Add Tool to list</button>
+          </div>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Active Tools Directory</h3>
+            <div class="cms-items-list" id="admToolsList"></div>
+          </div>
+        </div>
+
+        <!-- Tab: Gallery Manager -->
+        <div class="admin-tab-pane" id="tab-gallery">
+          <h2 class="admin-pane-title">Creative Works Gallery CMS</h2>
+          <p class="admin-pane-desc">Upload, organize, and manage your marketing creatives, posters, branding visual designs, and ads.</p>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;" id="galleryFormHeader">Add New Creative Work</h3>
+            <input type="hidden" id="editGalleryIndex" value="">
+            
+            <div class="admin-form-row">
+              <div class="admin-form-group">
+                <label class="admin-label">Creative Title</label>
+                <input type="text" id="galTitle" class="admin-input" placeholder="e.g. Meta Ad Banner Design">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Category / Type</label>
+                <select id="galCategory" class="admin-select">
+                  <option value="Poster">Poster Design</option>
+                  <option value="Social Media">Social Media Post</option>
+                  <option value="Advertisement">Paid Ad Creative</option>
+                  <option value="Branding">Branding / Logo</option>
+                  <option value="Other">Other Digital Asset</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="admin-form-group">
+              <label class="admin-label">Description / Campaign Context</label>
+              <input type="text" id="galDesc" class="admin-input" placeholder="e.g. Designed to increase click-through rate for clothing launch campaign">
+            </div>
+            
+            <div class="admin-form-group">
+              <label class="admin-label">Upload Creative Image</label>
+              <div class="admin-file-upload">
+                <svg class="admin-upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <div class="admin-upload-text" id="galUploadText">Upload Image File</div>
+                <div class="admin-upload-subtext">Supports PNG, JPG, JPEG (Max 1.5MB)</div>
+                <input type="file" id="uploadGalInput" accept="image/*">
+              </div>
+              <input type="hidden" id="galImageBase64" value="">
+              <img id="previewGalImage" class="admin-upload-preview" alt="Creative Preview" style="max-height: 120px; display: none; margin-top: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+            </div>
+            
+            <div style="display: flex; gap: 12px; margin-top: 10px;">
+              <button id="btnSaveGalleryItem" class="btn btn-solid" style="width: auto; min-height: 38px; padding: 6px 20px; font-size: 12px;">Save Creative</button>
+              <button id="btnCancelEditGalleryItem" class="btn btn-secondary" style="width: auto; min-height: 38px; padding: 6px 20px; font-size: 12px; display: none;">Cancel Edit</button>
+            </div>
+          </div>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Active Gallery Items</h3>
+            <div class="cms-items-list" id="admGalleryList"></div>
+          </div>
+        </div>
+        
+        <!-- Tab: Theme Settings -->
+        <div class="admin-tab-pane" id="tab-theme">
+          <h2 class="admin-pane-title">Dynamic Theme Color Customizer</h2>
+          <p class="admin-pane-desc">Select premium designer presets or customize individual colors in real-time without typing any code.</p>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 15px; font-size: 12px;">Designer Color Presets</h3>
+            <div class="theme-presets-grid" id="themePresetsGrid"></div>
+          </div>
+          
+          <div class="cms-manager-box">
+            <h3 class="admin-label" style="margin-bottom: 18px; font-size: 12px;">Custom Color Swatches</h3>
+            <div class="color-pickers-layout">
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px;">Background color</label>
+                <div class="color-picker-input-group">
+                  <input type="color" id="themeColorBg">
+                  <span style="font-size: 12px; font-family: monospace;" id="themeColorBgHex">#030008</span>
+                </div>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px;">Secondary Background</label>
+                <div class="color-picker-input-group">
+                  <input type="color" id="themeColorBgSec">
+                  <span style="font-size: 12px; font-family: monospace;" id="themeColorBgSecHex">#080314</span>
+                </div>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px;">Accent Purple Swatch</label>
+                <div class="color-picker-input-group">
+                  <input type="color" id="themeColorAccentPurple">
+                  <span style="font-size: 12px; font-family: monospace;" id="themeColorAccentPurpleHex">#7C3AED</span>
+                </div>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label" style="font-size: 9px;">Accent Neon Blue Swatch</label>
+                <div class="color-picker-input-group">
+                  <input type="color" id="themeColorAccentBlue">
+                  <span style="font-size: 12px; font-family: monospace;" id="themeColorAccentBlueHex">#00F0FF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Logic modules -->
+  <script src="./main.js"></script>
+
 </body>
 </html>
