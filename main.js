@@ -2,6 +2,72 @@
    MOHAMMED ADNAN P - DIGITAL MARKETING PORTFOLIO CMS LOGIC
    ========================================================================== */
 
+// 0. GLOBAL ERROR BOUNDARY FOR PORTFOLIO CRASH PROTECTION
+window.addEventListener('error', function(e) {
+  // Prevent infinite loops if error happens in the error handler itself
+  if (window.hasErrorDisplayed) return;
+  window.hasErrorDisplayed = true;
+  
+  console.error("Global Error Captured: ", e);
+  
+  const div = document.createElement('div');
+  div.style.position = 'fixed';
+  div.style.top = '0';
+  div.style.left = '0';
+  div.style.width = '100%';
+  div.style.zIndex = '999999';
+  div.style.background = '#7f1d1d';
+  div.style.color = '#fee2e2';
+  div.style.padding = '20px';
+  div.style.fontFamily = 'monospace';
+  div.style.fontSize = '14px';
+  div.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+  div.style.boxSizing = 'border-box';
+  
+  div.innerHTML = `
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px;">
+      <div style="font-weight: bold; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+        <svg style="width: 20px; height: 20px; flex-shrink: 0;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+        </svg>
+        <span>Portfolio Rendering Error Detected</span>
+      </div>
+      <div><strong>Message:</strong> ${e.message}</div>
+      <div><strong>File:</strong> ${e.filename} (Line ${e.lineno}, Col ${e.colno})</div>
+      <div style="font-size: 12.5px; opacity: 0.8; white-space: pre-wrap; overflow-x: auto; max-height: 150px; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px;">${e.error && e.error.stack ? e.error.stack : 'No stack trace available'}</div>
+      <div style="margin-top: 10px; display: flex; gap: 12px;">
+        <button id="errorResetBtn" style="background: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 12px; transition: background 0.2s;">Reset Local Storage & Reload</button>
+        <button id="errorCloseBtn" style="background: rgba(255,255,255,0.2); color: white; border: none; padding: 8px 16px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 12px; transition: background 0.2s;">Dismiss Banner</button>
+      </div>
+    </div>
+  `;
+  
+  document.body.prepend(div);
+  
+  // Attach event handlers
+  setTimeout(() => {
+    const resetBtn = document.getElementById('errorResetBtn');
+    const closeBtn = document.getElementById('errorCloseBtn');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        if (confirm("This will reset all your customizations (name, uploaded images, custom skills, theme colors) back to developer defaults. Are you sure you want to proceed?")) {
+          localStorage.removeItem('adnan_portfolio_data');
+          window.location.reload();
+        }
+      });
+      resetBtn.addEventListener('mouseover', () => resetBtn.style.background = '#dc2626');
+      resetBtn.addEventListener('mouseout', () => resetBtn.style.background = '#ef4444');
+    }
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        div.remove();
+      });
+    }
+  }, 100);
+});
+
+
+
 // 1. DEFAULT DATA STORAGE SCHEMA
 const DEFAULT_PORTFOLIO_DATA = {
   personalInfo: {
@@ -205,65 +271,112 @@ function loadPortfolioData() {
       
       let needsSave = false;
 
-      // Dynamic migration to ensure Photoshop and Illustrator are present in loaded skills
-      const hasPhotoshop = portfolio.skills.some(s => s.name.toLowerCase().includes('photoshop'));
+      // 1. DEFENSIVE SCHEMA CLEANUP: Ensure all essential lists are actual arrays
+      const arrayKeys = ['skills', 'tools', 'projects', 'certificates', 'timeline', 'gallery', 'stats'];
+      arrayKeys.forEach(key => {
+        if (!portfolio[key] || !Array.isArray(portfolio[key])) {
+          portfolio[key] = JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA[key]));
+          needsSave = true;
+        }
+      });
+
+      // 2. DEFENSIVE ELEMENT MIGRATIONS
+      
+      // Ensure every project in portfolio.projects has a valid stats array of KPIs
+      portfolio.projects.forEach((proj, idx) => {
+        if (!proj || typeof proj !== 'object') {
+          // Replace malformed project with default
+          const defaultProj = DEFAULT_PORTFOLIO_DATA.projects[idx] || DEFAULT_PORTFOLIO_DATA.projects[0];
+          portfolio.projects[idx] = JSON.parse(JSON.stringify(defaultProj));
+          needsSave = true;
+          return;
+        }
+        
+        if (!proj.stats || !Array.isArray(proj.stats) || proj.stats.length === 0) {
+          const defaultProj = DEFAULT_PORTFOLIO_DATA.projects[idx] || DEFAULT_PORTFOLIO_DATA.projects[0];
+          proj.stats = JSON.parse(JSON.stringify(defaultProj.stats));
+          needsSave = true;
+        } else {
+          // Ensure every stat in the stats array is valid
+          proj.stats.forEach((stat, sIdx) => {
+            if (!stat || typeof stat !== 'object') {
+              const defaultProj = DEFAULT_PORTFOLIO_DATA.projects[idx] || DEFAULT_PORTFOLIO_DATA.projects[0];
+              const defaultStat = defaultProj.stats[sIdx] || { val: 'KPI', lbl: 'Result Metric' };
+              proj.stats[sIdx] = JSON.parse(JSON.stringify(defaultStat));
+              needsSave = true;
+            } else {
+              if (stat.val === undefined || stat.val === null) {
+                stat.val = 'KPI';
+                needsSave = true;
+              }
+              if (stat.lbl === undefined || stat.lbl === null) {
+                stat.lbl = 'Result Metric';
+                needsSave = true;
+              }
+            }
+          });
+        }
+      });
+
+      // Ensure every gallery item is valid
+      portfolio.gallery.forEach((item, idx) => {
+        if (!item || typeof item !== 'object') {
+          const defaultItem = DEFAULT_PORTFOLIO_DATA.gallery[idx] || DEFAULT_PORTFOLIO_DATA.gallery[0];
+          portfolio.gallery[idx] = JSON.parse(JSON.stringify(defaultItem));
+          needsSave = true;
+          return;
+        }
+        if (!item.title || !item.category || !item.desc || !item.image) {
+          const defaultItem = DEFAULT_PORTFOLIO_DATA.gallery[idx] || DEFAULT_PORTFOLIO_DATA.gallery[0];
+          item.title = item.title || defaultItem.title;
+          item.category = item.category || defaultItem.category;
+          item.desc = item.desc || defaultItem.desc;
+          item.image = item.image || defaultItem.image;
+          needsSave = true;
+        }
+      });
+
+      // Ensure Photoshop and Illustrator are present in loaded skills safely
+      const hasPhotoshop = portfolio.skills.some(s => s && s.name && s.name.toLowerCase().includes('photoshop'));
       if (!hasPhotoshop) {
         portfolio.skills.push({ name: "Adobe Photoshop", level: 85 });
         needsSave = true;
       }
-      const hasIllustrator = portfolio.skills.some(s => s.name.toLowerCase().includes('illustrator'));
+      const hasIllustrator = portfolio.skills.some(s => s && s.name && s.name.toLowerCase().includes('illustrator'));
       if (!hasIllustrator) {
         portfolio.skills.push({ name: "Adobe Illustrator", level: 78 });
         needsSave = true;
       }
       
-      // Dynamic migration to update old title 'Digital Marketing Fresher' to 'Enthusiast'
-      if (portfolio.personalInfo.title === "Digital Marketing Fresher") {
+      // Update old title 'Digital Marketing Fresher' to 'Enthusiast'
+      if (portfolio.personalInfo && portfolio.personalInfo.title === "Digital Marketing Fresher") {
         portfolio.personalInfo.title = "Digital Marketing Enthusiast";
         needsSave = true;
       }
 
-      // Dynamic migration to filter out Google Ads skill
-      if (portfolio.skills) {
-        const originalSkillsLen = portfolio.skills.length;
-        portfolio.skills = portfolio.skills.filter(s => !s.name.toLowerCase().includes('google ads'));
-        if (portfolio.skills.length !== originalSkillsLen) {
-          needsSave = true;
-        }
-      }
-
-      // Dynamic migration to ensure Photoshop and Illustrator are present in loaded tools
-      if (portfolio.tools) {
-        const hasPsTool = portfolio.tools.some(t => t.desc.toLowerCase().includes('photoshop'));
-        if (!hasPsTool) {
-          portfolio.tools.push({ name: "Ps", desc: "Adobe Photoshop" });
-          needsSave = true;
-        }
-        const hasAiTool = portfolio.tools.some(t => t.desc.toLowerCase().includes('illustrator'));
-        if (!hasAiTool) {
-          portfolio.tools.push({ name: "Ai", desc: "Adobe Illustrator" });
-          needsSave = true;
-        }
-      }
-
-      // Dynamic migration to filter out Google Ads tool
-      if (portfolio.tools) {
-        const originalToolsLen = portfolio.tools.length;
-        portfolio.tools = portfolio.tools.filter(t => !t.desc.toLowerCase().includes('google ads') && !t.name.toLowerCase().includes('ads'));
-        if (portfolio.tools.length !== originalToolsLen) {
-          needsSave = true;
-        }
-      }
-
-      // Dynamic migration to ensure stats are present in loaded state
-      if (!portfolio.stats || !Array.isArray(portfolio.stats) || portfolio.stats.length === 0) {
-        portfolio.stats = JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA.stats));
+      // Filter out Google Ads skill safely
+      const originalSkillsLen = portfolio.skills.length;
+      portfolio.skills = portfolio.skills.filter(s => s && s.name && !s.name.toLowerCase().includes('google ads'));
+      if (portfolio.skills.length !== originalSkillsLen) {
         needsSave = true;
       }
 
-      // Dynamic migration to ensure gallery is present in loaded state
-      if (!portfolio.gallery || !Array.isArray(portfolio.gallery) || portfolio.gallery.length === 0) {
-        portfolio.gallery = JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA.gallery));
+      // Ensure Photoshop and Illustrator are present in loaded tools safely
+      const hasPsTool = portfolio.tools.some(t => t && t.desc && t.desc.toLowerCase().includes('photoshop'));
+      if (!hasPsTool) {
+        portfolio.tools.push({ name: "Ps", desc: "Adobe Photoshop" });
+        needsSave = true;
+      }
+      const hasAiTool = portfolio.tools.some(t => t && t.desc && t.desc.toLowerCase().includes('illustrator'));
+      if (!hasAiTool) {
+        portfolio.tools.push({ name: "Ai", desc: "Adobe Illustrator" });
+        needsSave = true;
+      }
+
+      // Filter out Google Ads tool safely
+      const originalToolsLen = portfolio.tools.length;
+      portfolio.tools = portfolio.tools.filter(t => t && t.desc && t.name && !t.desc.toLowerCase().includes('google ads') && !t.name.toLowerCase().includes('ads'));
+      if (portfolio.tools.length !== originalToolsLen) {
         needsSave = true;
       }
 
@@ -301,7 +414,12 @@ function mergeWithDefault(target, source) {
 }
 
 function savePortfolioData() {
-  localStorage.setItem('adnan_portfolio_data', JSON.stringify(portfolio));
+  try {
+    localStorage.setItem('adnan_portfolio_data', JSON.stringify(portfolio));
+  } catch (e) {
+    console.error("Failed to save portfolio data to localStorage", e);
+    alert("Warning: Local storage quota exceeded. Your changes could not be saved. Try uploading smaller images.");
+  }
 }
 
 // 2. STYLING INJECTOR
